@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#070b14">
+  <title>Checkout | Ryvx Tweaks</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="checkout-page">
+  <header class="site-header checkout-header">
+    <a class="brand" href="index.html"><span>RYVX</span><small>ESPORTS</small></a>
+    <a class="button button-small" href="index.html#tweaks">Back to Packages</a>
+  </header>
+
+  <main class="checkout-main">
+    <a class="back-link" href="index.html#tweaks">← Back to packages</a>
+    <div class="checkout-heading">
+      <div class="eyebrow">RYVX ESPORTS / ORDER REQUEST</div>
+      <h1>Complete Your <span style="color:#27a6ff">Request.</span></h1>
+      <p>Enter your details below. This form sends an order request; it does not charge you.</p>
+    </div>
+
+    <div class="checkout-layout">
+      <section class="checkout-panel">
+        <h2>Your Contact Information</h2>
+        <form id="checkoutForm">
+          <div class="form-grid">
+            <div class="field">
+              <label for="customerName">Name *</label>
+              <input id="customerName" name="name" type="text" maxlength="80" autocomplete="name" required placeholder="Your name">
+            </div>
+            <div class="field">
+              <label for="customerEmail">Email *</label>
+              <input id="customerEmail" name="email" type="email" maxlength="254" autocomplete="email" required placeholder="you@example.com">
+            </div>
+            <div class="field">
+              <label for="customerDiscord">Discord username (optional)</label>
+              <input id="customerDiscord" name="discord" type="text" maxlength="80" placeholder="username">
+            </div>
+            <div class="field">
+              <label for="customerPhone">Phone (optional)</label>
+              <input id="customerPhone" name="phone" type="tel" maxlength="30" autocomplete="tel" placeholder="Phone number">
+            </div>
+            <div class="field full">
+              <label for="paymentMethod">Preferred payment method *</label>
+              <select id="paymentMethod" name="paymentMethod" required>
+                <option value="">Choose a method</option>
+                <option value="PayPal">PayPal (if available)</option>
+                <option value="Card through payment provider">Card through a payment provider</option>
+                <option value="Apple Pay through payment provider">Apple Pay (if supported by provider)</option>
+                <option value="Discuss payment options">Discuss payment options</option>
+              </select>
+              <small class="form-note">No payment details, card numbers, passwords, or gift-card codes are collected here.</small>
+            </div>
+            <div class="field full">
+              <label for="orderNotes">Notes (optional)</label>
+              <textarea id="orderNotes" name="notes" maxlength="500" placeholder="Device model, game, or questions about the package"></textarea>
+            </div>
+          </div>
+
+          <p class="form-note">Only provide contact information you are comfortable sharing. A parent or guardian should help with any purchase or payment.</p>
+          <button class="button submit-button" id="submitOrder" type="submit">Send Order Request →</button>
+          <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+        </form>
+      </section>
+
+      <aside class="order-summary">
+        <h2>Order Summary</h2>
+        <div class="summary-product">
+          <div class="summary-icon" id="summaryIcon">⚙</div>
+          <div><strong id="summaryName">Loading package...</strong><small>Ryvx Tweaks digital guidance</small></div>
+        </div>
+        <div class="summary-row"><span>Package</span><span id="summaryPrice">$8.99</span></div>
+        <div class="summary-row"><span>Payment</span><span>Not collected here</span></div>
+        <div class="summary-row total"><span>Order request total</span><span id="summaryTotal">$8.99</span></div>
+        <p class="summary-disclaimer">This is a request, not a completed purchase. The team must confirm availability, final details, and a legitimate payment method separately. No performance result is guaranteed.</p>
+      </aside>
+    </div>
+  </main>
+
+  <script src="checkout.js"></script>
+</body>
+</html>
