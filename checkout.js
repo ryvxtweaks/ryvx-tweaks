@@ -1,7 +1,7 @@
 
 // Replace this with your deployed backend URL, without a trailing slash.
 // Example format: https://your-backend.example.com
-const API_BASE_URL = "https://ryvx-tweaks.onrender.com";
+const API_BASE_URL = "https://ryvx-tweaks.onrender.com/";
 
 const packages = {
   pc: { name: "PC / Laptop Tweaks", price: 8.99, icon: "▣" },
